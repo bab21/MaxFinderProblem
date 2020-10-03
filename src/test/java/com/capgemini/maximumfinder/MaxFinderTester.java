@@ -16,9 +16,9 @@ public class MaxFinderTester {
 	
 	@Test
 	public void test1_2() {
-		Integer[] array={2,5,6,18,9};
+		Integer[] array=new Integer[5];
 		MaxFinder maxfinder=new MaxFinder(array);
-		assertEquals((Integer)18,(Integer)MaxFinder.find_maximum(maxfinder));
+		assertEquals(null,(Integer)MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test1_3() {
