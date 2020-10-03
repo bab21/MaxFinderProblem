@@ -17,12 +17,16 @@ public class MaxFinder <E extends Comparable> {
 		Optional<E> checkNull = Optional.ofNullable(maxfinder.array[maxfinder.array.length-1]);   
         if (checkNull.isPresent()) {
         	Arrays.sort(maxfinder.array);
+        	printMax((E)maxfinder.array[maxfinder.array.length-1]);
     		return (E)maxfinder.array[maxfinder.array.length-1];
         } 
         else{ 
         	System.out.println("word is null"); 
             return null;
        }
+	}
+	public static <E> void printMax (E max) {
+		System.out.println(max);
 	}
 	
 }
