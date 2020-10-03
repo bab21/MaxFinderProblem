@@ -9,51 +9,60 @@ public class MaxFinderTester {
 	
 	@Test
 	public void test1_1() {
-		MaxFinder maxfinder=new MaxFinder(9,2,4);
+		Integer[] array={2,5,6,8,9};
+		MaxFinder maxfinder=new MaxFinder(array);
 		assertEquals((Integer)9,(Integer)MaxFinder.find_maximum(maxfinder));
 	}
 	
 	@Test
 	public void test1_2() {
-		MaxFinder maxfinder=new MaxFinder(9,20,4);
-		assertEquals((Integer)20,(Integer)MaxFinder.find_maximum(maxfinder));
+		Integer[] array={2,5,6,18,9};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals((Integer)18,(Integer)MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test1_3() {
-		MaxFinder maxfinder=new MaxFinder(9, 2, 30);
-		assertEquals((Integer)30,(Integer)MaxFinder.find_maximum(maxfinder));
+		Integer[] array={2,5,6,8,90};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals((Integer)90,(Integer)MaxFinder.find_maximum(maxfinder));
 	}
 	
 	@Test
 	public void test2_1() {
-		MaxFinder maxfinder=new MaxFinder(9.0F, 2.0F, 3.0F);
+		Float[] array={2.0F,5.0F,6.0F,8.0F,9.0F};
+		MaxFinder maxfinder=new MaxFinder(array);
 		assertEquals((Float)9.0F,(Float)MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test2_2() {
-		MaxFinder maxfinder=new MaxFinder(9.0F, 20.0F, 12.0F);
-		assertEquals((Float)20.0F,(Float)MaxFinder.find_maximum(maxfinder));
+		Float[] array={2.0F,5.0F,6.0F,18.0F,9.0F};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals((Float)18.0F,(Float)MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test2_3() {
-		MaxFinder maxfinder=new MaxFinder(9.0F, 2.0F, 30.0F);
-		assertEquals((Float)30.0F,(Float)MaxFinder.find_maximum(maxfinder));
+		Float[] array={2.0F,5.0F,6.0F,18.0F,90.0F};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals((Float)90.0F,(Float)MaxFinder.find_maximum(maxfinder));
 	}
 	
 	@Test
 	public void test3_1() {
-		MaxFinder maxfinder=new MaxFinder("Peach","Apple","Banana");
+		String[] array= {"Peach","Apple","Orange","Mango","Gauva"};
+		MaxFinder maxfinder=new MaxFinder(array);
 		assertEquals("Peach",MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test3_2() {
-		MaxFinder maxfinder=new MaxFinder("Apple","Peach","Banana");
-		assertEquals("Peach",MaxFinder.find_maximum(maxfinder));
+		String[] array= {"Peach","Apple","Orange","Mango","Gauva","Zebra"};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals("Zebra",MaxFinder.find_maximum(maxfinder));
 	}
 	@Test
 	public void test3_3() {
-		MaxFinder maxfinder=new MaxFinder("Banana", "Apple","Peach");
-		assertEquals("Peach",MaxFinder.find_maximum(maxfinder));
+		String[] array= {"Lion","Apple","Orange","Mango","Gauva"};
+		MaxFinder maxfinder=new MaxFinder(array);
+		assertEquals("Orange",MaxFinder.find_maximum(maxfinder));
 	}
 	
 
