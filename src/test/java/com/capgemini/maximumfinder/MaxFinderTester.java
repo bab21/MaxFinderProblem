@@ -39,5 +39,18 @@ public class MaxFinderTester {
 		assertEquals((Float)30.0F,(Float)maxfinder.find_maximum(9.0F, 2.0F, 30.0F));
 	}
 	
+	@Test
+	public void test3_1() {
+		assertEquals("Peach",maxfinder.find_maximum("Peach","Apple","Banana"));
+	}
+	@Test
+	public void test3_2() {
+		assertEquals("Peach",maxfinder.find_maximum("Apple","Peach","Banana"));
+	}
+	@Test
+	public void test3_3() {
+		assertEquals("Peach",maxfinder.find_maximum( "Banana", "Apple","Peach"));
+	}
+	
 
 }
